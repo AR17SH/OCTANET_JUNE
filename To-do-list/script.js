@@ -1,7 +1,4 @@
-// Task counter for unique IDs
 let taskId = 1;
-
-// Add task to the list
 function addTask() {
   const taskName = document.getElementById("task-name").value;
   const category = document.getElementById("category").value;
@@ -13,7 +10,6 @@ function addTask() {
     alert("Please enter a task name.");
     return;
   }
-
   const task = {
     id: taskId++,
     name: taskName,
@@ -26,8 +22,6 @@ function addTask() {
   createTaskElement(task);
   clearForm();
 }
-
-// Create a new task element
 function createTaskElement(task) {
   const taskList = document.getElementById("tasks");
   const li = document.createElement("li");
@@ -40,8 +34,6 @@ function createTaskElement(task) {
   `;
   taskList.appendChild(li);
 }
-
-// Clear the form fields
 function clearForm() {
   document.getElementById("task-name").value = "";
   document.getElementById("category").value = "";
